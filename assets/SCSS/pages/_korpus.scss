@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodyK {
+  background-color: #e3e7f9;
+}
+
+.korpus_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.korpusOne_text {
+  p {
+    span {
+      font-weight: 650;
+    }
+  }
+}
+
+.korpusThree_text {
+  p {
+    span {
+      font-weight: 650;
+    }
+  }
+}
+
+.footerEnd{
+    margin-top: 25px;
+}

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodyK {
+  background-color: #e3e7f9;
+}
+
+#studentSection{
+    .korpus_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .korpusOne_text {
+      p {
+        font-size: 17px;
+        font-weight: 505;
+        color: rgb(74, 69, 69);
+    
+        span {
+          font-weight: 650;
+        }
+      }
+    }
+    
+    .studentHome_image {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        transition: 1s;
+        &:hover {
+          transition: 1s;
+          scale: 1.03;
+        }
+      }
+    }
+    
+    .korpusThree_text {
+      p {
+        font-size: 17px;
+        font-weight: 505;
+        color: rgb(74, 69, 69);
+        span {
+          font-weight: 650;
+        }
+      }
+    }
+}
+
+.footerEnd {
+  margin-top: 25px;
+}
