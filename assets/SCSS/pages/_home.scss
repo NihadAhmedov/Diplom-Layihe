@@ -16,7 +16,6 @@ header {
   align-items: center;
   padding: 0 40px;
   margin: 0 auto;
-
   .logo {
     margin-top: 8px;
     img {
@@ -43,6 +42,7 @@ header {
         }
         .mega_menu {
           position: absolute;
+
           left: 69%;
           padding: 5px;
           background-color: #fff;
@@ -56,7 +56,7 @@ header {
             }
           }
         }
-        .mega_menu2{
+        .mega_menu2 {
           position: absolute;
           left: 59%;
           padding: 5px;
@@ -119,6 +119,7 @@ header {
     padding: 0 10px;
     nav {
       position: absolute;
+      animation: menuanime 1s forwards;
       left: 0;
       top: 0;
       z-index: 1;
@@ -150,6 +151,15 @@ header {
   }
 }
 
+@keyframes menuanime {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 #backImage {
   background-image: url(../../../assets/images/mezun_img.jpg);
   width: 100%;
@@ -162,20 +172,18 @@ header {
     width: 100%;
     min-height: 650px;
     display: flex;
-    justify-content: start;
     align-items: center;
     .container {
-      // display: flex;
-      // justify-content: start;
-      // align-items: start;
       color: white;
-
+     
       .systemText {
-        width: 60%;
-        text-align: center;
+        width: 100%;
+      
         h1 {
           font-size: 65px;
           font-weight: 600;
+          width: 60%;
+          text-align: center;
         }
       }
     }
@@ -188,6 +196,8 @@ header {
       .container {
         .systemText {
           text-align: center;
+          display: flex;
+          justify-content: center;
           h1 {
             font-size: 35px;
           }
@@ -245,7 +255,6 @@ header {
 #newsSection {
   margin-top: 30px;
   background-color: #fff;
-  background-image: url(../../../assets/images/body_bg.jpg);
   width: 100%;
   min-height: 850px;
   background-size: cover;
@@ -255,7 +264,9 @@ header {
     background-color: white;
     border-radius: 15px;
     transition: 1s;
+    border: 1px solid gray;
     &:hover {
+      box-shadow: 0 0 5px 3px gray;
       scale: 1.1;
       transition: 1s;
       cursor: pointer;
@@ -266,6 +277,7 @@ header {
         height: 250px;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
+        object-fit: cover;
       }
     }
     .newsText {
@@ -303,6 +315,17 @@ header {
   }
 }
 
+@media (max-width:600px){
+  #newsSection{
+    .newsDiv{
+      h1{
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+
 .projectsDiv {
   text-align: center;
   display: flex;
@@ -318,35 +341,46 @@ header {
   }
 }
 
-// #carouselExampleIndicators {
-//   .carousel-inner {
-//     .carousel-item {
-//       position: relative;
-//       img {
-//         width: 100%;
-//         height: auto;
-//         background-size: cover;
-//         background-position: center;
-//       }
-//       .absoluteDiv {
-//         position: absolute;
-//         bottom: 0;
-//         margin-bottom: 30px;
-//         color: black;
-//         padding: 25px;
-//         text-align: center;
-//         background-color: white;
-//         h4{
-//           font-weight: 700;
-//           font-size: 35px;
-//         }
-//         p{
-//           font-weight: 700;
-//         }
-//       }
-//     }
-//   }
-// }
+#backPhoto {
+  background-image: url(../../../assets/images/info_block_bg.jpg);
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 25px;
+  .institutionDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 60px;
+      font-weight: 600;
+    }
+  }
+  .institutionİmgs {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    #unicef {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #backPhoto {
+    .institutionDiv {
+      text-align: center;
+      h1 {
+        font-size: 40px;
+      }
+    }
+ 
+  }
+}
 
 footer {
   background-color: #212526;

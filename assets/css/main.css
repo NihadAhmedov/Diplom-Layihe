@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -115,6 +116,7 @@ header .hamburger div {
   }
   header nav {
     position: absolute;
+    animation: menuanime 1s forwards;
     left: 0;
     top: 0;
     z-index: 1;
@@ -144,6 +146,14 @@ header .hamburger div {
     display: block;
   }
 }
+@keyframes menuanime {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 #backImage {
   background-image: url(../../../assets/images/mezun_img.jpg);
   width: 100%;
@@ -157,24 +167,26 @@ header .hamburger div {
   width: 100%;
   min-height: 650px;
   display: flex;
-  justify-content: start;
   align-items: center;
 }
 #backImage .black .container {
   color: white;
 }
 #backImage .black .container .systemText {
-  width: 60%;
-  text-align: center;
+  width: 100%;
 }
 #backImage .black .container .systemText h1 {
   font-size: 65px;
   font-weight: 600;
+  width: 60%;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
   #backImage .black .container .systemText {
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
   #backImage .black .container .systemText h1 {
     font-size: 35px;
@@ -224,7 +236,6 @@ header .hamburger div {
 #newsSection {
   margin-top: 30px;
   background-color: #fff;
-  background-image: url(../../../assets/images/body_bg.jpg);
   width: 100%;
   min-height: 850px;
   background-size: cover;
@@ -234,8 +245,10 @@ header .hamburger div {
   background-color: white;
   border-radius: 15px;
   transition: 1s;
+  border: 1px solid gray;
 }
 #newsSection .newsThreeDiv:hover {
+  box-shadow: 0 0 5px 3px gray;
   scale: 1.1;
   transition: 1s;
   cursor: pointer;
@@ -245,6 +258,7 @@ header .hamburger div {
   height: 250px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  object-fit: cover;
 }
 #newsSection .newsThreeDiv .newsText {
   padding: 28px;
@@ -272,6 +286,11 @@ header .hamburger div {
   transition: all 0.7s ease;
 }
 
+@media (max-width: 600px) {
+  #newsSection .newsDiv h1 {
+    font-size: 32px;
+  }
+}
 .projectsDiv {
   text-align: center;
   display: flex;
@@ -287,6 +306,41 @@ header .hamburger div {
   font-weight: 640;
 }
 
+#backPhoto {
+  background-image: url(../../../assets/images/info_block_bg.jpg);
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 25px;
+}
+#backPhoto .institutionDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#backPhoto .institutionDiv h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+#backPhoto .institutionİmgs img {
+  width: 100%;
+  height: auto;
+}
+#backPhoto .institutionİmgs #unicef {
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  #backPhoto .institutionDiv {
+    text-align: center;
+  }
+  #backPhoto .institutionDiv h1 {
+    font-size: 40px;
+  }
+}
 footer {
   background-color: #212526;
   color: white;
@@ -475,4 +529,44 @@ footer .container .end_news ul li a {
 
 .footerEnd {
   margin-top: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.leader_img img {
+  width: 100%;
+  height: auto;
+}
+
+.leaderText a button {
+  padding: 5px 10px;
+  border: none;
+  text-decoration: underline red;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+}
+.leaderText a button i {
+  display: none;
+}
+.leaderText a button:hover i {
+  display: block;
+  transform: translateX(5px);
+  margin-top: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text_img img {
+  width: 100%;
+  height: auto;
 }

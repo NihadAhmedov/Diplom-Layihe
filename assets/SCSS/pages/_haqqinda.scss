@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.leader_img {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.leaderText {
+  a {
+    button {
+      padding: 5px 10px;
+      border: none;
+      text-decoration: underline red;
+      background-color: transparent;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+
+      i {
+        display: none;
+      }
+
+      &:hover i {
+        display: block;
+        transform: translateX(5px);
+        margin-top: 5px;
+      }
+    }
+  }
+}
