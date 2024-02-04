@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teskilat_text {
+    margin-top: 20px;
+  ol {
+    margin-left: 20px;
+    margin-top: 20px;
+    li {
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.projects_text {
+  width: 80%;
+  ol {
+    margin-left: 15px;
+    li {
+      font-weight: 500;
+    }
+  }
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px){
+    .erasmus_div{
+        h1{
+            font-size: 27px;
+        }
+    }
+    .projects_text{
+        width: 95%;
+        h4{
+            font-size: 22px;
+        }
+    }
+}
+
+.footerB {
+  margin-top: 25px;
+}

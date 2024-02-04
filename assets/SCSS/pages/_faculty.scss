@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#faculties {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  //   #modal {
+  //     border: 2px solid gray;
+  //     position: relative;
+  //     padding: 25px;
+  //     display: flex;
+  //     #modal_image {
+  //       img {
+  //         width: 100%;
+  //         height: auto;
+  //       }
+  //     }
+  //     #modal_text {
+  //       #close_icon {
+  //         position: absolute;
+  //         top: 0;
+  //         right: 0;
+  //         margin: 0 auto;
+  //       }
+  //     }
+  //   }
+  .box {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    border: 2px solid gray;
+    .facultyWrite {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 20px;
+      align-items: center;
+    }
+    .facultyDiv {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        width: 280px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+    .click_btn {
+      display: flex;
+      padding: 15px;
+      align-items: flex-end;
+      button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #272727;
+        color: white;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 2px solid #272727;
+        font-weight: 600;
+        transition: 0.6s;
+        &:hover {
+          background-color: white;
+          color: #272727;
+          border: 2px solid #272727;
+        }
+      }
+    }
+  }
+}
+
+.twoDiv {
+  display: flex;
+  gap: 25px;
+  .search_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    &:hover input {
+      width: 250px;
+      background-color: rgb(230, 223, 223);
+    }
+    input {
+      width: 0;
+      border: none;
+      padding: 8px;
+      font-weight: 500;
+      transition: 0.8s;
+      outline: none;
+      border-radius: 25px;
+    }
+    button {
+      padding: 6px;
+      border: none;
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+      transition: 0.7s;
+      border-radius: 50%;
+      width: 40px;
+
+      &:hover {
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .twoDiv {
+    display: flex;
+    flex-direction: column;
+    .search_div{
+        text-align: center;
+      &:hover input{
+        width: 210px;
+      }
+    }
+  }
+  #faculties {
+    .box {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .facultyDiv {
+        img {
+          width: 100%;
+        }
+      }
+      .click_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

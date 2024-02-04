@@ -6,6 +6,13 @@
   text-decoration: none;
 }
 
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -38,10 +45,6 @@ header nav ul li:hover .mega_menu {
   display: block;
   transition: 1s;
 }
-header nav ul li:hover .mega_menu2 {
-  display: block;
-  transition: 1s;
-}
 header nav ul li .mega_menu {
   position: absolute;
   left: 69%;
@@ -55,21 +58,6 @@ header nav ul li .mega_menu ul {
   flex-direction: column;
 }
 header nav ul li .mega_menu ul li {
-  margin-bottom: 10px;
-}
-header nav ul li .mega_menu2 {
-  position: absolute;
-  left: 59%;
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 5px;
-  display: none;
-}
-header nav ul li .mega_menu2 ul {
-  display: flex;
-  flex-direction: column;
-}
-header nav ul li .mega_menu2 ul li {
   margin-bottom: 10px;
 }
 header nav ul li .active {
@@ -121,7 +109,8 @@ header .hamburger div {
     top: 0;
     z-index: 1;
     width: 230px;
-    height: 100vh;
+    height: 95vh;
+    border-radius: 5px;
     background-color: #fefefe;
     transition: 0.4s;
     box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
@@ -569,4 +558,171 @@ footer .container .end_news ul li a {
 .text_img img {
   width: 100%;
   height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#faculties {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#faculties .box {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  border: 2px solid gray;
+}
+#faculties .box .facultyWrite {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+  align-items: center;
+}
+#faculties .box .facultyDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#faculties .box .facultyDiv img {
+  width: 280px;
+  height: 250px;
+  object-fit: cover;
+}
+#faculties .box .click_btn {
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+}
+#faculties .box .click_btn button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #272727;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #272727;
+  font-weight: 600;
+  transition: 0.6s;
+}
+#faculties .box .click_btn button:hover {
+  background-color: white;
+  color: #272727;
+  border: 2px solid #272727;
+}
+
+.twoDiv {
+  display: flex;
+  gap: 25px;
+}
+.twoDiv .search_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.twoDiv .search_div:hover input {
+  width: 250px;
+  background-color: rgb(230, 223, 223);
+}
+.twoDiv .search_div input {
+  width: 0;
+  border: none;
+  padding: 8px;
+  font-weight: 500;
+  transition: 0.8s;
+  outline: none;
+  border-radius: 25px;
+}
+.twoDiv .search_div button {
+  padding: 6px;
+  border: none;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  transition: 0.7s;
+  border-radius: 50%;
+  width: 40px;
+}
+.twoDiv .search_div button:hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+@media (max-width: 991px) {
+  .twoDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .twoDiv .search_div {
+    text-align: center;
+  }
+  .twoDiv .search_div:hover input {
+    width: 210px;
+  }
+  #faculties .box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #faculties .box .facultyDiv img {
+    width: 100%;
+  }
+  #faculties .box .click_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teskilat_text {
+  margin-top: 20px;
+}
+.teskilat_text ol {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.teskilat_text ol li a {
+  color: black;
+}
+
+.projects_text {
+  width: 80%;
+}
+.projects_text ol {
+  margin-left: 15px;
+}
+.projects_text ol li {
+  font-weight: 500;
+}
+.projects_text span {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .erasmus_div h1 {
+    font-size: 27px;
+  }
+  .projects_text {
+    width: 95%;
+  }
+  .projects_text h4 {
+    font-size: 22px;
+  }
+}
+.footerB {
+  margin-top: 25px;
 }
