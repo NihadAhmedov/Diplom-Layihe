@@ -4,8 +4,21 @@
   box-sizing: border-box;
 }
 
+.header {
+  position: static;
+  nav {
+    ul {
+      li {
+        .mega_menu {
+          left: 68%;
+        }
+      }
+    }
+  }
+}
+
 .teskilat_text {
-    margin-top: 20px;
+  margin-top: 20px;
   ol {
     margin-left: 20px;
     margin-top: 20px;
@@ -19,6 +32,7 @@
 
 .projects_text {
   width: 80%;
+
   ol {
     margin-left: 15px;
     li {
@@ -31,18 +45,90 @@
   }
 }
 
-@media (max-width:600px){
-    .erasmus_div{
-        h1{
-            font-size: 27px;
-        }
+@media (max-width: 600px) {
+  .erasmus_div {
+    h1 {
+      font-size: 27px;
     }
-    .projects_text{
-        width: 95%;
-        h4{
-            font-size: 22px;
-        }
+  }
+  .projects_text {
+    width: 95%;
+    h4 {
+      font-size: 20px;
     }
+  }
+  .projects_div {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+.code_div {
+  border: 2px solid gray;
+  box-shadow: 0 0 15px gray;
+  border-radius: 5px;
+  #head_image {
+    width: 100%;
+    height: auto;
+  }
+  .code_text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    #logo_sdu {
+      width: 120px;
+      height: auto;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    img {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+    a {
+      text-decoration: none;
+      transition: .5s;
+      font-weight: 600;
+
+      &:hover {
+        font-weight: 600;
+        color: rgb(10, 10, 226);
+        transition: 1s;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .code {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .code_div {
+    .code_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-size: 25px;
+        text-align: center;
+      }
+      p {
+        font-size: 17px;
+      }
+      #logo_sdu {
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 .footerB {

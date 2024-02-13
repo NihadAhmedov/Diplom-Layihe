@@ -11,16 +11,31 @@
   }
 }
 
+.header {
+  position: static;
+  nav{
+    ul{
+      li{
+        .mega_menu{
+          left: 68%;
+        }
+      }
+    }
+  }
+}
+
 .leaderText {
   a {
+    color: blue;
     button {
       padding: 5px 10px;
       border: none;
-      text-decoration: underline red;
+      text-decoration: underline;
       background-color: transparent;
       cursor: pointer;
       font-weight: 600;
       display: flex;
+      color: rgb(69, 69, 243);
 
       i {
         display: none;
@@ -31,6 +46,55 @@
         transform: translateX(5px);
         margin-top: 5px;
       }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .video_uni {
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .leaderText{
+    h1{
+      font-size: 30px;
+    }
+  }
+  .video_text{
+    h1{
+      font-size: 35px;
+    }
+  }
+  .facultyText {
+    h1{
+      font-size: 33px;
+    }
+    ul {
+      li {
+        margin-left: 12px;
+      }
+    }
+  }
+  .organizationText {
+    h1{
+      font-size: 33px;
+    }
+    ul {
+      li {
+        margin-left: 12px;
+      }
+    }
+  }
+  .universitetName{
+    h1{
+      font-size: 37px;
+    }
+  }
+  .history{
+    h1{
+      font-size: 33px;
     }
   }
 }

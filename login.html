@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body class="loginBody">
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="info_div">
+                            <h1>Student Information Page</h1>
+                            <div class="user">
+                                <a href="./user.html">
+                                    <button><i class="fa-solid fa-user"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="mainSec">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="enterCalc">
+                            <h2>İmtahana giriş balinizi hesablayin</h2>
+                            <div class="enterDivs">
+                                <div class="enterInp">
+                                    <label for="seminarİnp">Seminar balınızı daxil edin:</label>
+                                    <input type="number" placeholder="Enter" id="seminarİnp">
+                                </div>
+                                <div class="enterInp">
+                                    <label for="serbestİnp">Sərbəst iş balınızı daxil edin:</label>
+                                    <input type="number" placeholder="Enter" id="serbestİnp">
+                                </div>
+                                <div class="enterButton">
+                                    <button id="enterBtn">Cəmi</button>
+                                </div>
+                                <div class="resultEnter">
+                                    <p id="resultİd"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="exam_result">
+                            <h2>Imtahan yekun balınızı hesablayin</h2>
+                            <div class="exam_div">
+                                <div class="examinp">
+                                    <label for="exam_enter">İmtahana giriş balınız:</label>
+                                    <input type="number" id="exam_enter">
+                                </div>
+                                <div class="examinp">
+                                    <label for="exam_result">İmtahan balınız:</label>
+                                    <input type="number" id="exam_result">
+                                </div>
+                                <div class="exam_button">
+                                    <button id="exam_end">Yekun</button>
+                                </div>
+                                <div>
+                                    <p id="numberResult"></p>
+                                    <p id="stringResult"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 justify-content-center">
+                        <div class="main">
+                            <h2>Semestr ortalamanizi hesablayin</h2>
+                            <div class="note">
+                                <div class="calc">
+                                    <label for="ortalamaInp">Birinci imtahan balinizi (yekun) daxil edin</label>
+                                    <input type="number" placeholder="Balinizi girin" required id="ortalamaInp">
+                                </div>
+                                <div class="calc">
+                                    <label for="ortalamaInpOne">Ikinci imtahan balinizi (yekun) daxil edin</label>
+                                    <input type="number" placeholder="Balinizi girin" required id="ortalamaInpOne">
+                                </div>
+                                <div class="calc">
+                                    <label for="ortalamaInpTwo">Üçüncü imtahan balinizi (yekun) daxil edin</label>
+                                    <input type="number" placeholder="Balinizi girin" required id="ortalamaInpTwo">
+                                </div>
+                                <div class="calc">
+                                    <label for="ortalamaInpThree">Dördüncü imtahan balinizi (yekun) daxil edin</label>
+                                    <input type="number" placeholder="Balinizi girin" required id="ortalamaInpThree">
+                                </div>
+                                <div class="calc">
+                                    <label for="ortalamaInpFour">Sonuncu imtahan balinizi (yekun) daxil edin</label>
+                                    <input type="number" placeholder="Balinizi girin" required id="ortalamaInpFour">
+                                </div>
+                                <div class="butonsCalc">
+                                    <button id="btnOrta">Hesabla</button>
+                                </div>
+                                <div class="result">
+                                    <p id="ortalama"></p>
+                                    <p id="netice"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="chooseDiv">
+                            <h3>Növbəti semestr keçirilməsini isdədiyiniz dərsi və müəllimi seçə bilərsiz:</h3>
+                        </div>
+                        <div id="newDiv">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div class="backBtn">
+                    <button onclick="backPage()"><i class="fa-solid fa-backward"></i> Log out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

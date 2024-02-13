@@ -9,7 +9,17 @@
 // }
 .header {
   position: static;
+  nav{
+    ul{
+      li{
+        .mega_menu{
+          left: 68%;
+        }
+      }
+    }
+  }
 }
+
 
 #backColorOne {
   background-color: #e3e9f7;
@@ -21,8 +31,7 @@
       height: auto;
       border-radius: 25px;
       transition: 0.5s;
-
-      &:hover {
+    &:hover {
         scale: 1.03;
         transition: 0.5s;
       }

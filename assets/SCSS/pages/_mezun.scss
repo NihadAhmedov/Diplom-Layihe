@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// .main {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   background: #f1f4fd;
+// }
+
+.day_text{
+    font-weight: 600;
+    font-size: 18px;
+    span{
+        margin-left: 20px;
+    }
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+
+  .slide-button#prev-slide {
+    left: -20px;
+    display: none;
+  }
+  .slide-button#next-slide {
+    right: -20px;
+  }
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  .slider-wrapper {
+    position: relative;
+    .slide-button {
+      height: 50px;
+      width: 50px;
+      color: #fff;
+      background: #000;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .image-list {
+      font-size: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      display: grid;
+      gap: 18px;
+      margin-bottom: 30px;
+      grid-template-columns: repeat(10, 1fr);
+      .image-item {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+  .slider-scrollbarr {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .scrollbar-track {
+      height: 2px;
+      width: 100%;
+      background: #ccc;
+      position: relative;
+      border: 4px;
+      .scrollbar-thumb {
+        position: absolute;
+        height: 100%;
+        width: 95%;
+        background: #000;
+        border-radius: inherit;
+        cursor: grab;
+      }
+      .scrollbar-thumb:active {
+        cursor: grabbing;
+        height: 8px;
+        top: -2px;
+      }
+      .scrollbar-thumb::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+    }
+    &:hover .scrollbar-track {
+      height: 5px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+    .day_text{
+        p{
+            font-size: 16px;
+        }
+    }
+  .slider-wrapper {  
+    .slide-button {
+      display: none !important;
+    }
+    .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      .image-item {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  .slider-scrollbarr{
+    .scrollbar-thumb{
+        width: 20%;
+    }
+  }
+}

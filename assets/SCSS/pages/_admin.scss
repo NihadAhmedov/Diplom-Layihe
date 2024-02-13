@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: none;
+  // border: none;
+}
+
+#adminSec {
+  width: 100%;
+  background: #ebe9e9;
+  padding: 1rem;
+
+  .main_content {
+    // position: relative;
+    width: 100%;
+
+    .header_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 2rem;
+      margin-bottom: 1rem;
+      img {
+        height: 50px;
+        width: 50px;
+      }
+      .header_title {
+        color: rgba(113, 99, 118, 255);
+      }
+      .user_info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        #form {
+          display: flex;
+          gap: 5px;
+          .sort_box {
+            margin-top: 8px;
+            #selectValue {
+              padding: 5px;
+            }
+          }
+          .search_box {
+            background: rgb(237, 237, 237);
+            border-radius: 15px;
+            color: rgba(113, 99, 118, 255);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            input {
+              background-color: transparent;
+              padding: 10px;
+              border: none;
+              outline: none;
+            }
+            i {
+              font-size: 1.2rem;
+              cursor: pointer;
+              transition: all 0.5s ease-out;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.tabular_wrapper {
+  background: #fff;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 2rem;
+  .table_container {
+    width: 100%;
+    margin-top: 2rem;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        background: rgba(113, 99, 118, 255);
+        color: #fff;
+        tr {
+          th {
+            padding: 15px;
+          }
+        }
+      }
+      #tbody {
+        td {
+          padding: 15px;
+          overflow: hidden;
+          img {
+            width: 50px;
+            height: 50px;
+          }
+          #deleteBtn {
+            padding: 3px 12px;
+            border: none;
+            background-color: red;
+            color: white;
+            border: 2px solid red;
+            transition: 0.6s;
+            border-radius: 5px;
+            &:hover {
+              background-color: #fff;
+              color: red;
+              border: 2px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #adminSec {
+    .main_content {
+      .header_wrapper {
+        .user_info {
+          #form {
+            flex-wrap: wrap;
+            display: flex;
+            .search_box {
+              input {
+                width: 80%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .tabular_wrapper {
+    .table_container {
+      overflow-x: scroll;
+    }
+  }
+}
+
+
+#getInfo {
+  display: flex;
+  flex-wrap: wrap;
+  .boxInfo {
+    .boxDiv {
+      border: 2px solid black;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 14px rgba(113, 99, 118, 255);
+      .imgBox {
+        text-align: center;
+        margin-top: 5px;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      .boxText {
+        padding: 0 25px;
+        margin-top: 10px;
+        span {
+          display: flex;
+          flex-direction: column;
+          font-weight: 560;
+        }
+        ul {
+          margin-top: 5px;
+          li {
+            list-style-type: none;
+          }
+        }
+        #deleteBtn {
+          padding: 3px 12px;
+          position: relative;
+          border: none;
+          background-color: red;
+          color: white;
+          border: 2px solid red;
+          transition: 0.6s;
+          margin-bottom: 12px;
+          left: 45px;
+          border-radius: 5px;
+          &:hover {
+            background-color: #fff;
+            color: red;
+            border: 2px solid red;
+            transition: 0.6s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.load {
+  display: flex;
+  justify-content: end;
+  margin-top: 25px;
+  &:hover i {
+    transform: translateX(-7px);
+  }
+  button {
+    padding: 5px 15px;
+    background-color: rgba(113, 99, 118, 255);
+    border: 2px solid rgba(113, 99, 118, 255);
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.7s ease;
+    &:hover {
+      border: 2px solid rgba(113, 99, 118, 255);
+      color: rgba(113, 99, 118, 285);
+      background-color: transparent;
+      transition: all 0.7s ease;
+    }
+  }
+}
+
+.addNewInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ebe9e9;
+ 
+  #formNew {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .inputs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 60%;
+      height: 65vh;
+      text-align: center;
+      border-radius: 10px;
+      gap: 5px;
+      .inpText {
+        input {
+          padding: 8px;
+          border-radius: 5px;
+          width: 320px;
+          border: none;
+        }
+      }
+      .inpButton {
+        button {
+          padding: 5px 15px;
+          border: none;
+          margin-top: 15px;
+          border-radius: 15px;
+          background-color: #fff;
+          color: #272727;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width:991px){
+//   .addNewInfo{
+//     #formNew{
+//       .inputs{
+//         .inpText{
+//           input{
+//             width: 100px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 600px) {
+  .addNewInfo {
+    margin-top: 30px;
+    #formNew {
+      margin-top: 30px;
+      .inputs {
+        margin-top: 30px;
+        input {
+          width: 220px !important;
+          height: auto;
+        }
+      }
+    }
+  }
+}

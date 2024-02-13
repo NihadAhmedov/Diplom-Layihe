@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #change_box {
+    position: relative;
+    padding: 30px;
+    background-color: rgba(113, 99, 118, 255);
+    width: 85%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    #loginModal_closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 5px;
+      border: none;
+      padding: 5px 8px;
+      cursor: pointer;
+      background-color: #272727;
+      color: #fff;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #changeDiv {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+      .input_box {
+        input {
+          padding: 5px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+        }
+        span {
+          i {
+            font-size: 23px;
+          }
+        }
+      }
+      button {
+        padding: 3px 10px;
+        border: none;
+        margin-top: 30px;
+        width: 70px;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+      }
+    }
+  }
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 25px;
+  .boxChoose {
+    .teachDiv {
+      border: 2px solid;
+      margin-bottom: 20px;
+      padding: 25px;
+      box-shadow: 0 7px 15px gray;
+      border-radius: 10px;
+      img {
+        width: 220px;
+        height: 200px;
+      }
+      .teachText {
+        margin-top: 10px;
+        span {
+          display: flex;
+          flex-direction: column;
+        }
+        button {
+          padding: 3px 25px;
+          margin-top: 8px;
+          border: none;
+          background-color: red;
+          border: 2px solid red;
+          color: #fff;
+          transition: all 0.6s ease;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            border: 2px solid red;
+            background-color: #fff;
+            color: #272727;
+            transition: all 0.6s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+#backBtn_user {
+  padding: 3px 25px;
+  margin-top: 8px;
+  border: none;
+  background-color: #675cff;
+  border: 2px solid #675cff;
+  color: #fff;
+  transition: all 0.6s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid #675cff;
+    background-color: #fff;
+    color: #272727;
+    transition: all 0.6s ease;
+  }
+}
