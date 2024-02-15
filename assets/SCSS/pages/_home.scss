@@ -437,15 +437,21 @@ header {
           align-items: center;
           justify-content: center;
           p {
-            color: green;
+            color: #fff;
+            background-color: green;
             font-weight: 600;
             font-size: 18px;
+            padding: 5px;
+            border-radius: 10px;
+            border: 2px solid green;
+            transition: .5s;
             i {
-              color: green;
+              color: #fff;
               font-weight: 900;
             }
           }
         }
+
         .close_icon {
           position: absolute;
           left: 0;

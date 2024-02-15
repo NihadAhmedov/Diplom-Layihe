@@ -32,51 +32,70 @@
                                     <option value="5">Çoxdan aza (qrup sayi)</option>
                                 </select>
                             </div>
-                            <div class="search_box">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input id="srchInput" type="text" placeholder="Search">
+                            <div class="searchAndImage">
+
+                                <div class="search_box">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input id="srchInput" type="text" placeholder="Search">
+                                </div>
+                                <div class="adminImg">
+                                    <img src="./assets/images/user_image.png" alt="">
+                                </div>
                             </div>
-                            <img src="./assets/images/user_image.png" alt="">
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="addNewInfo">
-                <form id="formNew">
-                    <div class="inputs">
-                        <div class="inpText">
-                            <input type="text" placeholder="Send image" id="imgInp" required autocomplete="off">
+        <section id="addFormSec">
+            <div class="container mt-5">
+                <div class="addNewInfo">
+                    <form id="formAdmin">
+                        <div class="inputs">
+                            <div class="inpText">
+                                <label for="imgInp">Image</label>
+                                <input type="text" placeholder="Send image" id="imgInp" required autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="nameInp">Username</label>
+                                <input type="text" placeholder="Enter username" id="usnameInp" required autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="surnameInp">Password</label>
+                                <input type="text" placeholder="Enter password" id="passwInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="surnameInp">Email</label>
+                                <input type="email" placeholder="Enter email" id="emInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="groupInp">Group</label>
+                                <input type="number" placeholder="Enter group" id="groupInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="courseInp">Course</label>
+                                <input type="number" placeholder="Enter course" id="courseInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="facultyInp">Faculty</label>
+                                <input type="text" placeholder="Enter faculty" id="facultyInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpText">
+                                <label for="specialInp">Specialty</label>
+                                <input type="text" placeholder="Enter specialty" id="specialInp" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="inpButton">
+                                <button type="submit" id="createBtn">Create</button>
+                            </div>
                         </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter name" id="nameInp" required autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter surname" id="surnameInp" required autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter father name" id="fnameInp" required
-                                autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter group" id="groupInp" required autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter course" id="courseInp" required autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter faculty" id="facultyInp" required autocomplete="off">
-                        </div>
-                        <div class="inpText">
-                            <input type="text" placeholder="Enter specialty" id="specialInp" required
-                                autocomplete="off">
-                        </div>
-                        <div class="inpButton">
-                            <button id="createBtn">Create</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </section>
         <section>
@@ -108,15 +127,14 @@
                 </div>
             </div>
         </section>
-        <div class="container mt-5">
-            <div id="getInfo">
-            </div>
-            <div class="load">
-                <button id="loadBtn"><i class="fa-solid fa-arrow-left"></i> Load More</button>
-            </div>
-        </div>
-        </section>
 
+        <section>
+            <div class="end_btn">
+                <a href="./index.html">
+                    <button>Log out <i class="fa-solid fa-right-from-bracket"></i></button>
+                </a>
+            </div>
+        </section>
 
     </main>
 

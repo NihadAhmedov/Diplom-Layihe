@@ -52,11 +52,12 @@ let ortalamaInpOne = document.getElementById("ortalamaInpOne");
 let ortalamaInpTwo = document.getElementById("ortalamaInpTwo");
 let ortalamaInpThree = document.getElementById("ortalamaInpThree");
 let ortalamaInpFour = document.getElementById("ortalamaInpFour");
-let btnOrta = document.getElementById("btnOrta");
+let formEnd = document.getElementById("formEnd");
 let ortalama = document.getElementById("ortalama");
 let netice = document.getElementById("netice");
 
-btnOrta.addEventListener("click", () => {
+formEnd.addEventListener("submit", (e) => {
+  e.preventDefault()
   let inpText = ortalamaInp.value;
   let inpTextOne = ortalamaInpOne.value;
   let inpTextTwo = ortalamaInpTwo.value;
@@ -74,7 +75,7 @@ btnOrta.addEventListener("click", () => {
 
   if (sonuc) {
     ortalama.innerText = `Ortalamaniz : ${sonuc}`;
-    // ortalama.style.backgroundColor = "black";
+    ortalama.style.backgroundColor = "green";
   }
 });
 
@@ -82,11 +83,12 @@ btnOrta.addEventListener("click", () => {
 
 let seminarİnp = document.getElementById("seminarİnp");
 let serbestİnp = document.getElementById("serbestİnp");
-let enterBtn = document.getElementById("enterBtn");
+let userForm = document.getElementById("userForm");
 let resultİd = document.getElementById("resultİd");
 let resultİdTwo = document.getElementById("resultİdTwo");
 
-enterBtn.addEventListener("click", () => {
+userForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   let enterTextTwo = parseFloat(serbestİnp.value);
   let enterText = parseFloat(seminarİnp.value);
 
@@ -105,11 +107,12 @@ enterBtn.addEventListener("click", () => {
 
 let examEnter = document.getElementById("exam_enter");
 let examResult = document.getElementById("exam_result");
-let examButton = document.getElementById("exam_end");
+let userFormTwo = document.getElementById("userFormTwo");
 let numberResult = document.getElementById("numberResult");
 let stringResult = document.getElementById("stringResult");
 
-examButton.addEventListener("click", () => {
+userFormTwo.addEventListener("click", (e) => {
+  e.preventDefault();
   let examText = parseFloat(examEnter.value);
   let examTextTwo = parseFloat(examResult.value);
 
@@ -137,7 +140,6 @@ examButton.addEventListener("click", () => {
     stringResult.innerText = "E Zəif";
     stringResult.style.backgroundColor = "red";
   } else if (yekun >= 100) {
-    // numberResult.innerText = `Ortalamaniz : ${yekun}`;
     stringResult.innerText = "Ballarinizi duzgun qeyd edin!";
     stringResult.style.backgroundColor = "crimson";
   } else {
@@ -148,3 +150,18 @@ examButton.addEventListener("click", () => {
 });
 
 ///
+
+// getUSer
+let iduser = new URLSearchParams(window.location.search).get("userId");
+
+let userget = document.getElementById("getUSer");
+userget.addEventListener("click", getUserFunc);
+
+function getUserFunc(e) {
+  e.preventDefault();
+  if (iduser) {
+    window.location.href = `../../user.html?userId=${iduser}`;
+  } else {
+    window.location.href = `/`;
+  }
+}

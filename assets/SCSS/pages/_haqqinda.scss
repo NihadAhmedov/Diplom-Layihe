@@ -51,11 +51,13 @@
 }
 
 @media (max-width: 600px) {
-  .video_uni {
-    video {
+  .uni_video {
+    iframe{
+
       width: 100%;
-      height: auto;
+      height: 200px;
     }
+    
   }
   .leaderText{
     h1{

@@ -4,63 +4,142 @@
   box-sizing: border-box;
 }
 
-#settings {
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-weight: 600;
+    font-size: 55px;
+  }
+}
+
+#getSec {
+  background-color: gray;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  #change_box {
-    position: relative;
-    padding: 30px;
-    background-color: rgba(113, 99, 118, 255);
-    width: 85%;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    #loginModal_closeBtn {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 5px;
-      border: none;
-      padding: 5px 8px;
-      cursor: pointer;
-      background-color: #272727;
-      color: #fff;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #changeDiv {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 25px;
-      .input_box {
-        input {
-          padding: 5px;
-          border-radius: 5px;
-          border: none;
-          outline: none;
+  border-radius: 8px;
+  #settings {
+    .changeAccount {
+      #changeDivForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .change_image {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          input {
+            padding: 3px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            width: 250px;
+          }
         }
-        span {
-          i {
-            font-size: 23px;
+        #change_box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          h1 {
+            display: flex;
+            justify-content: center;
+          }
+          .input_box {
+            display: flex;
+            flex-direction: column;
+            input {
+              padding: 5px;
+              width: 350px;
+              border-radius: 5px;
+              border: none;
+              outline: none;
+            }
+            label {
+              font-weight: 600;
+            }
+          }
+          .change_btn {
+            text-align: center;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            .main_btn {
+              padding: 5px 20px;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+              font-weight: 580;
+              border: 2px solid black;
+              transition: all 0.7s ease;
+              &:hover {
+                background-color: transparent;
+                color: white;
+              }
+            }
           }
         }
       }
-      button {
-        padding: 3px 10px;
-        border: none;
-        margin-top: 30px;
-        width: 70px;
-        border-radius: 5px;
-        background-color: green;
-        color: white;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .head {
+    h2 {
+      font-size: 32px;
+    }
+  }
+  #getSec {
+    #settings {
+      .changeAccount {
+        #changeDivForm {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .change_image {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            height: auto;
+            input {
+              width: 250px;
+            }
+          }
+          #change_box {
+            .input_box {
+              input {
+                width: 270px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #list {
+    .boxChoose {
+      .teachDiv {
+        img {
+          width: 200px;
+          height: auto;
+        }
       }
     }
   }
@@ -78,6 +157,10 @@
       padding: 25px;
       box-shadow: 0 7px 15px gray;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       img {
         width: 220px;
         height: 200px;
@@ -120,10 +203,19 @@
   transition: all 0.6s ease;
   border-radius: 5px;
   cursor: pointer;
+  margin: 20px;
   &:hover {
     border: 2px solid #675cff;
     background-color: #fff;
     color: #272727;
     transition: all 0.6s ease;
   }
+}
+
+@media (max-width:767px){
+  #getSec #settings .changeAccount #changeDivForm .change_image img{
+    width: 100% !important;
+    height: auto;
+  }
+
 }

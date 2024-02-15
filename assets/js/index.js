@@ -82,8 +82,8 @@ function registerCheck(e) {
     password: password.value,
     image:
       "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=",
-    course: 3,
-    group: 555,
+    course: "",
+    group: "",
   };
   axios
     .post(`https://655c84d425b76d9884fd7251.mockapi.io/login`, data)
@@ -92,15 +92,12 @@ function registerCheck(e) {
       succes.innerHTML = `
       <p>Succes registration <i class="fa-solid fa-check"></i></p>
       `;
+      // if(password.length <6){
+      //   succes.innerHTML = `
+      //   <p>Parola min 6</p>`
+      // }
     });
 }
-
-/// login
-function getuser(id){
-  window.location.href = `../user.html?userID=${id}`
-
-}
-
 
 let usernameInp = document.getElementById("usernameInp");
 let loginForm = document.getElementById("loginForm");
@@ -108,32 +105,33 @@ let pass = document.getElementById("passInp");
 let falseDiv = document.getElementById("false");
 
 loginForm.addEventListener("submit", loginCheck);
-loginForm.addEventListener("submit", adminpage);
+// loginForm.addEventListener("submit", adminpage);
 
 async function loginCheck(e) {
   e.preventDefault();
+  let username = usernameInp.value;
+  let password = pass.value;
+
   await axios
     .get(`https://655c84d425b76d9884fd7251.mockapi.io/login`)
     .then((res) => {
       db = res.data;
-      let data = db.filter(
-        (item) =>
-          item.username.includes(usernameInp.value) &&
-          item.password === pass.value,
-          getuser(db.id)
-      );
-      console.log(data);
-      if (data.length > 0) {
-        window.location.href = "../login.html";
-      }
-      //  else if(username == nihad && password ==  100){
-      //    window.location.href = "../admin.html${item.id}"
-      //  }
-      else {
-        falseDiv.innerHTML = `
-        <p>İstifadəçi adı və ya şifrəsi yanlışdır !</p>
-        
-        `;
+      let userFound = false;
+
+      db.forEach((item) => {
+        if (item.username === username && item.password === password) {
+          userFound = true;
+          if (item.username === "admin") {
+            window.location.href = `../../admin.html`;
+          } else {
+            window.location.href = `../../login.html?userId=${item.id}`;
+          }
+        }
+      });
+
+      if (!userFound) {
+        falseDiv.innerHTML = `<p>İstifadəçi adı və ya şifrəsi yanlışdır!</p>`;
       }
     });
 }
+
